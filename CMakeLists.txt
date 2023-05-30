@@ -1,0 +1,16 @@
+cmake_minimum_required(VERSION 3.20)
+project(jianZhiOffer)
+
+set(CMAKE_CXX_STANDARD 14)
+
+add_executable(jianZhiOffer main.cpp)
+
+add_executable(089_rob 089_rob.cpp)
+add_executable(090_robHuan 090_robHuan.cpp)
+add_executable(018_isPalindom 018_isPalindom.cpp)
+add_executable(027_isPalindrome 027_isPalindrome.cpp)
+add_executable(031_LRUCache 031_LRUCache.cpp)
+add_executable(033_groupAnagrams 033_groupAnagrams.cpp)
+add_executable(034_isAlienSorted 034_isAlienSorted.cpp)
+add_executable(1 1.cpp)
+add_executable(c2 c2.cpp)
