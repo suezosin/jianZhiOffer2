@@ -10,7 +10,7 @@ public:
         //空间复杂度：O(k)
         vector<vector<int>> res;
         if(nums1.empty()||nums2.empty()||k<=0) return res;
-        auto cmp = [&nums1,&nums2](pair<int,int> a,pair<int,int> b){
+        auto cmp = [&nums1,&nums2](pair<int,int> a,pair<int,int> b){//auto自动推导类型,lambda表达式,
             return nums1[a.first]+nums2[a.second]>nums1[b.first]+nums2[b.second];
         };
         priority_queue<pair<int,int>,vector<pair<int,int>>,decltype(cmp)> pq(cmp);
@@ -22,7 +22,7 @@ public:
             if(cur.first+1<nums1.size()){
                 pq.push(make_pair(cur.first+1,cur.second));
             }
-            if(cur.first==0&&cur.second+1<nums2.size()){
+            if(cur.first==0&&cur.second+1<nums2.size()){ //这里需要注意，只有当cur.first==0时，才能将cur.second+1加入队列,否则会出现重复
                 pq.push(make_pair(cur.first,cur.second+1));
             }
             k--;
